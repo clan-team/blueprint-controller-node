@@ -12,6 +12,8 @@ var lifxAdapter = new LifxAdapter();
 app.get('/update', function(req, res) {
   var platform = req.query.platform;
   var power = (req.query.power === 'true');
+  var hue = req.query.hue;
+  var saturation = req.query.saturation;
   var adapter;
 
   if (platform === 'philips-hue') {
@@ -24,6 +26,14 @@ app.get('/update', function(req, res) {
     adapter.turnOn();
   } else {
     adapter.turnOff();
+  }
+
+  if (hue) {
+    adapter.changeHue(hue);
+  }
+
+  if (saturation) {
+    adapter.changeSaturation(saturation);
   }
 
   res.setHeader('Content-Type', 'application/json');
