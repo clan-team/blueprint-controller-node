@@ -1,0 +1,19 @@
+{
+  "name": "blueprint-controller-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lifx": "~> 0.3",
+    "homebridge": "0.2",
+    "homebridge-philipshue": "~> 0.0",
+    "express": "~> 4.13",
+    "util": "~> 0.10",
+    "underscore": "~> 1.8"
+  }
+}
